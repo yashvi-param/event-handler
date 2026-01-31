@@ -1,117 +1,16 @@
-<img width="1768" height="829" alt="Screenshot 2026-01-28 163846" src="https://github.com/user-attachments/assets/cb5355ef-8f9e-4851-8a19-f171e2647f16" />
-🍔 Fast Food Ordering App (React)
+# React + Vite
 
-A simple Fast Food Ordering / Listing App built with React and Bootstrap.
-Users can view fast food items, see details in a modal, and simulate ordering by increasing attendee/order count.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-🚀 Features
+Currently, two official plugins are available:
 
-📋 Display fast food items list
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-👀 View food details in a modal
+## React Compiler
 
-➕ Register / Order food items
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-🗑️ Delete food items
+## Expanding the ESLint configuration
 
-🎨 Responsive UI using Bootstrap
-
-⚛️ Built with React Hooks (useState)
-
-🛠️ Technologies Used
-
-React JS
-
-Bootstrap 5
-
-CSS
-
-JavaScript (ES6)
-
-📁 Project Structure
-src/
-│
-├── Components/
-│   ├── Header.jsx
-│   ├── EventList.jsx
-│   ├── EventModal.jsx
-│
-├── FastFoodData.js
-├── App.jsx
-├── App.css
-└── main.jsx
-
-📦 Fast Food Data
-
-Fast food items are stored in FastFoodData.js and imported into App.jsx.
-
-import { FastFoodData } from '../FastFoodData';
-
-
-Each food item includes:
-
-Title
-
-Category
-
-Price
-
-Location
-
-Status
-
-Attendees (orders)
-
-⚙️ App Logic Overview
-
-useState manages food items and modal state
-
-handleRegister() increases order count
-
-handleDelete() removes a food item
-
-Modal opens when user clicks View
-
-▶️ How to Run the Project
-
-Clone the repository
-
-git clone <your-repo-link>
-
-
-Install dependencies
-
-npm install
-
-
-Start the development server
-
-npm run dev
-
-
-Open in browser:
-
-http://localhost:5173
-
-📸 UI Preview
-
-Header with app title
-
-Cards listing fast food items
-
-Modal for details and actions
-
-🔮 Future Improvements
-
-🛒 Add cart functionality
-
-⭐ Add ratings & reviews
-
-🔍 Search & filter food items
-
-💾 Backend integration (Node + MongoDB)
-
-👩‍💻 Author
-
-Yashvi
-Learning Full Stack Development 🚀
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

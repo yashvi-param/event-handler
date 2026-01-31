@@ -1,45 +1,24 @@
-import { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import TopNavbar from './components/TopNavbar';
+import EventsPage from "./EventsPage";
 import './App.css';
 
-import Header from './Components/Header';
-import EventList from './Components/EventList';
-import EventModal from './Components/EventModal';
-import { FastFoodData } from '../FastFoodData';
-
 function App() {
-  const [events, setEvents] = useState(FastFoodData.map(e => ({ ...e, attendees: e.attendees ?? 0 })));
-
-  const [selectedEvent, setSelectedEvent] = useState(null);
-  const [showModal, setShowModal] = useState(false);
-
-  const handleRegister = (id) => {
-    setEvents(prev => prev.map(e => e.id === id ? { ...e, attendees: e.attendees + 1 } : e));
-  };
-
-  const handleDelete = (id) => {
-    setEvents(prev => prev.filter(e => e.id !== id));
-    setShowModal(false);
-  };
-
   return (
-    <div className="app-container">
-      <Header />
+    <>
+      <TopNavbar />
 
-      <EventList
-        events={events}
-        onView={(e) => { setSelectedEvent(e); setShowModal(true); }}
-        onRegister={handleRegister}
-      />
+      <header className="hero">
+        <div className="container hero-content">
+          <h1 className="display-5 fw-bold">Event Handlers</h1>
+          <p className="lead text-muted">Learn and test event handling in React with Bootstrap.</p>
+        </div>
+      </header>
 
-      <EventModal
-        show={showModal}
-        event={selectedEvent}
-        onClose={() => setShowModal(false)}
-        onRegister={handleRegister}
-        onDelete={handleDelete}
-      />
-    </div>
+      <main className="container">
+        <EventsPage />
+      </main>
+    </>
   );
 }
 
